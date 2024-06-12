@@ -1,2 +1,2 @@
-# Testing1
-Just tesing
+# Performing CRUD operations in django
+
