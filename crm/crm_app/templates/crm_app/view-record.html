@@ -1,0 +1,32 @@
+{% extends 'crm_app/base.html' %}
+{% block content %}
+<div class="card">
+    
+    
+    <strong>
+        &nbsp; &nbsp; <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        {{record.last_name}}
+        {{record.first_name}}
+    </strong>
+    <hr>
+<div class="card-body">
+    <p> <strong>ID:</strong> {{record.id}} </p> 
+    <p> <strong>Email:</strong> {{record.email}} </p> 
+    <p> <strong>Phone number:</strong> {{record.phone}} </p>
+    <p> <strong>Address:</strong> {{record.address}} </p> 
+    <p> <strong>City:</strong> {{record.city}} </p> 
+    <p> <strong>Province:</strong> {{record.province}} </p> 
+    <p> <strong>Country:</strong> {{record.country}} </p>
+    <p> <strong>Date joined:</strong> {{record.date_joined}} </p> 
+</div>
+
+</div>
+<br>
+<a href="{% url 'dashboard'  %}" class="btn btn-primary">Return</a>
+&nbsp;
+<a href="{% url 'update-record' record.id %}" class="btn btn-info">Update Record</a>
+&nbsp; 
+<a href="{% url 'delete-record' record.id %}" class="btn btn-danger">Delete Record</a>
+&nbsp;
+
+{% endblock content %}
